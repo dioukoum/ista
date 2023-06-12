@@ -33,7 +33,7 @@ require 'connexion.php';
                 echo '<td>' . $ligne['couleur'] . '</td>';
                 echo '<td>' . $ligne['ram'] . '</td>';
                 echo '<td>' . $ligne['disque'] . '</td>';
-                echo '<td>' . $ligne['nom'] . '</td>';
+                echo '<td>' . $ligne['nom'] . ' ' . $ligne['nom'] . '</td>';
                 echo '<td>
                     <a href="ordinateur_form.php?idm=' . $ligne['idord'] . '">Editer</a>
                     <a href="ordinateur_list.php?ids=' . $ligne['idord'] . '">Supprimer</a>

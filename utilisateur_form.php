@@ -1,6 +1,6 @@
 <?php
 require 'connexion.php';
-include 'navBar.php';
+// include 'navBar.php';
 if (isset($_POST['enregistrer'])) {
     if (isset($_POST['nom'], $_POST['login'], $_POST['password']));
     $req = $bd->prepare('insert into utilisateur(nom,login,password) values(?,?,?)');
@@ -38,15 +38,10 @@ if (isset($_POST['modifier'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utilistateur</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php include 'head.php' ?>
 
-<body>
+<body class="nav-md">
+    <?php include 'header.php' ?>
     <fieldset>
         <legend>Utilisateur</legend>
         <form action="utilisateur_form.php" method="post">
@@ -76,6 +71,7 @@ if (isset($_POST['modifier'])) {
             <?php } ?>
         </form>
     </fieldset>
+    <?php include 'foot.php' ?>
 </body>
 
 </html>
